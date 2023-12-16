@@ -1,0 +1,59 @@
+<%- include("include/sidebar") %>
+<section class="main">
+   
+    <h1>All Student's Details</h1>
+    <br> 
+    <% if(msg!="") { %>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times</span>
+            <strong><%= msg %></strong>
+        </div>
+    <% } %>   
+    <table class="table-box">
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile No.</th>
+                <th>Gender</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(result.length>0) {%>
+
+                <% for(var i=0;i<result.length;i++){%>
+                    <tr>
+                        <td><%- i+1 %></td>
+                        <td><%- result[i].name %></td>
+                        <td><%- result[i].email %></td>
+                        <td><%- result[i].phone %></td>
+                        <td id="gender"><%- result[i].gender %></td>
+                        <td><a href="/delete-student?id=<%- result[i].id %>"><i class="fa-solid fa-trash"></i></a><span> | <a href="/update-student?id=<%- result[i].id %>"><i class="fa-solid fa-pen"></i></a></td>
+                    </tr>
+                 <% } %>
+    
+            <% } %>       
+    
+        </tbody>
+    </table>
+</section>
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity="0";
+            setTimeout(function(){
+                div.style.display="none"
+            },600);
+        }
+
+    }
+</script>
+<script src="/js/script.js"></script>
+</body>
+
+</html>

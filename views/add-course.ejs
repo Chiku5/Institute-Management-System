@@ -1,0 +1,50 @@
+<%- include("include/sidebar") %>
+<section class="main">
+   
+    <h1>Add New Course</h1>
+    <br>
+    <% if(msg!="") { %>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times</span>
+            <strong><%= msg %></strong>
+        </div>
+    <% } %>   
+    <form action="/add-course" method="post">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="Enter Course Name" >
+        <br><br>
+        <label for="duration">Course Duration:</label>
+        <br>
+        <input type="text" name="duration" id="duration" placeholder="Enter course duration No" >
+        <br><br>
+        <label for="tfee">Total Fees:</label>
+        <br>
+        <input type="number" name="tfee" id="tfee" placeholder="Total Fees" >
+        <br><br>
+        <label for="dfee">Discounted Fees:</label>
+        <br>
+        <input type="number" name="dfee" id="dfee" placeholder="Discounted Fees" >
+        <br>
+        <div class="submit">
+            <input type="submit" name="submit" id="submit" >
+        </div>
+    </form>
+</section>
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity="0";
+            setTimeout(function(){
+                div.style.display="none"
+            },600);
+        }
+
+    }
+</script>
+<script src="/js/script.js"></script>
+</body>
+</html>

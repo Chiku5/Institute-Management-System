@@ -1,0 +1,51 @@
+<%- include("include/sidebar") %>
+<section class="main">
+   
+    <h1>Update Student Details</h1>
+    <br>
+    <% if(msg!="") { %>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times</span>
+            <strong><%= msg %></strong>
+        </div>
+    <% } %>   
+    <form action="/update-student" method="post">
+        <input type="text" name="name" hidden placeholder="Enter your Name" value="<%= result[0].name %>" >
+        <br><br>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="Enter your Name" value="<%= result[0].name %>" >
+        <br><br>
+        <label for="phone">Phone No:</label>
+        <br>
+        <input type="number" name="phone" id="phone" placeholder="Enter your Phone No" value="<%= result[0].phone %>">
+        <br><br>
+        <label for="email">E-mail:</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Enter your E-mail" value="<%= result[0].email %>">
+        <br><br>
+        <label>Gender</label>
+        <br>
+        <input type="radio"  <%= y=(result[0].gender==="M"?'checked':'') %> name="gender" value="M" > <span>M</span> 
+        <input type="radio" <%= y=(result[0].gender==="F"?'checked':'') %> name="gender" value="F"> <span>F</span> 
+        <div class="submit">
+            <input type="submit" name="submit" id="submit" >
+        </div>
+    </form>
+</section>
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity="0";
+            setTimeout(function(){
+                div.style.display="none"
+            },600);
+        }
+
+    }
+</script>
+</body>
+</html>

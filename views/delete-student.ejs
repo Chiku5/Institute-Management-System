@@ -1,0 +1,60 @@
+<%- include("include/sidebar") %>
+<section class="main">
+    <div class="msg">
+        <h1>Are you sure you want to delete this student?</h1>
+    </div>
+    <br>
+    <!-- <table class="table-box2">
+            <thead>
+                <% for(var i=0;i<result.length;i++){%>
+                    <tr>
+                        <th>Name</th>
+                        <td><%- result[i].name %></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><%- result[i].email %></td>
+                    </tr>
+                    <tr>
+                        <th>Phone No.</th>
+                        <td><%- result[i].phone %></td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td><%- result[i].gender %></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a  href="/deleteStudent-confirm?id=<%- result[i].id %>">Yes</a> 
+                            <a href="/view-student">No</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </thead>
+    </table> -->
+    <% for(var i=0;i<result.length;i++){%>
+        <div class="delete">
+            <div class="delete-box-left">
+                <p>Name</p>
+                <p>E-mail</p>
+                <p>Phone No.</p>
+                <p>Gender</p>
+            </div>
+            <div class="delete-box-right">
+                <p><%- result[i].name %></p>
+                <p><%- result[i].email %></p>
+                <p><%- result[i].phone %></p>
+                <p><%- result[i].gender %></p>
+            </div>
+        </div>
+        <div class="delete-action-btn">
+            <a  href="/deleteStudent-confirm?id=<%- result[i].id %>" id="yes">Yes</a> 
+            <a href="/view-student" id="no">No</a>
+        </div>
+    <% } %>
+</section>l
+</body>
+</html>
+
+
+                        

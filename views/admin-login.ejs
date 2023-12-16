@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/css/adminlogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .alert{
+            opacity: 1;
+            transition:  opacity 0.6s;  
+        }
+    </style>
+</head>
+<body>
+    <div class="img"></div>
+    <nav>                    
+         <h1 class="logo">Coll<span>Poll...</span></h1>
+         <div class="menu-bar">
+             <ul>
+                 <li><a href="">Home</a></li>
+                 <li><a href="">About Us</a></li>
+                 <li>
+                     <a href="">Login <i class="fa fa-caret-down"></i></a>
+                     <div class="dropdown">
+                             <ul>
+                                 <li><a href="/admin-login">Admin</a></li>
+                                 <li><a href="/student-login">User</a></li>
+                             </ul>
+                     </div>
+                 </li>
+                 <li><a href="">Contact Us</a></li>
+             </ul>
+         </div>
+    </nav>
+    <div class="box">
+        <h1>Admin Login</h1>
+        <% if(msg!="") { %>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times</span>
+                <strong><%= msg %></strong>
+            </div>
+        <% } %>   
+        <form action="/admin-login" method="post">
+            <label for="uid">User Id:</label>
+            <br>
+            <input type="text" name="uid" id="uid" placeholder="Enter your user id" >
+            <br><br>
+            <label for="pass">Password:</label>
+            <br>
+            <input type="password" name="pass" id="pass" placeholder="Enter your password" >
+            <div class="submit">
+                <input type="submit" name="submit" id="submit" >
+            </div>
+        </form>
+    </div>
+    <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity="0";
+                setTimeout(function(){
+                    div.style.display="none"
+                },600);
+            }
+
+        }
+    </script>
+</body>
+</html>

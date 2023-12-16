@@ -1,0 +1,185 @@
+h1{
+    margin: 0 25px;
+    /* background-color: rgba(212, 226, 251, 0.239); */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.565);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.table-box{
+    border-collapse: collapse;
+    margin: 5px 25px;
+    font-size: 0.9em;
+    /* max-width: 700px; */
+    min-width: 90%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    /* box-shadow: 0 0 20px rgba(0,0,0,.2); */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.447);
+}.table-box thead tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.table-box th, .table-box td{
+    padding: 12px 15px;
+}
+.table-box tbody tr{
+    border-bottom: 1px solid #b8b8b8;
+}
+.table-box tbody tr:nth-last-of-type(even){
+    background-color: #f3f3f3;
+}
+.table-box tbody tr:nth-last-of-type(odd){
+    background-color: #c8ffb9;
+}
+.table-box tbody tr:last-of-type{
+    border-bottom: 2px solid  #009879;
+}
+.table-box2{
+    border-collapse: collapse;
+    margin: 25px 25px;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+.table-box2 th{
+    border-right: 1px solid grey;
+    background-color: rgb(149, 203, 181);
+}
+.table-box2 th, .table-box2 td{
+    padding: 12px 15px;
+    border-bottom: 1px solid grey;
+}
+.table-box2 td{
+    background-color: #10ff935a;
+    color: white;
+}
+.table-box2 thead tr:last-of-type{
+    border-bottom: 2px solid  #009879;
+}
+.table-box2 td a{
+    color: rgb(255, 255, 255);
+    padding: 3px 8px;
+    background-color: rgb(71, 71, 255);
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.table-box2 td a:hover{
+    background-color: rgb(0, 43, 173);
+}
+
+form{
+    margin: 0 25px;
+    box-shadow: 0 2px 5px black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+}
+label{
+    font-size: 1.1rem;
+    color: white;
+}
+#name,#phone,#email,#duration,#tfee,#dfee{
+    color: black;
+    font-weight: bold;
+    width: 300px;
+    border: 1px solid black;
+    padding: .8rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(206, 189, 189, 0.8);
+    background-color: rgb(236, 234, 229);
+}
+.submit{
+    width: 100%;
+    margin-top: 20px;
+}
+#submit{
+    width: 6rem;
+    padding: 5px;
+    background-color: orange;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(206, 189, 189, 0.8);
+    margin-bottom: 10px;
+}
+.alert{
+    padding: 10px;
+    background-color: rgb(202, 0, 0);
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.closebtn{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover{
+    color: black;
+}
+.delete{
+    margin: 0 25px;
+    box-shadow: 0 2px 5px black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    background-color: rgba(245, 222, 179, 0.331);
+}
+.delete-box-left{
+    width: 26%;
+}
+.delete-box-left p, .delete-box-right p{
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px black;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+}
+.delete-box-left p{
+    color: white;
+    background-color: rgba(7, 8, 8, 0.518);
+    color: #ffffff;
+    text-align: left;
+}
+.delete-box-right p{
+    background-color: #ffffff53;
+    color: black;
+}
+.delete-box-right{
+    width: 73%;
+}
+.delete-action-btn{
+    margin: 20px 25px;
+}
+.delete-action-btn a{
+    font-size: 22px;
+    color: white;
+    background-color: rgba(0, 162, 255, 0.721);
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+#yes:hover{
+    background-color: rgba(0, 210, 0, 0.801);
+    transition: .4s all;
+}
+#no:hover{
+    background-color: rgba(255, 47, 0, 0.697);
+    transition: .4s all;
+}

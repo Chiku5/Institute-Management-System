@@ -1,0 +1,51 @@
+<%- include("include/sidebar") %>
+<section class="main">
+   
+    <h1>Update Course Details</h1>
+    <br>
+    <% if(msg!="") { %>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times</span>
+            <strong><%= msg %></strong>
+        </div>
+    <% } %>   
+    <form action="/update-course" method="post">
+        <input type="number" name="id" hidden value="<%= result[0].id %>" >
+        <br><br>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="Enter course name" value="<%= result[0].name %>" >
+        <br><br>
+        <label for="duration">Course Duration:</label>
+        <br>
+        <input type="text" name="duration" id="duration" placeholder="Enter course duration" value="<%= result[0].duration %>">
+        <br><br>
+        <label for="tfee">Total Fees:</label>
+        <br>
+        <input type="number" name="tfee" id="tfee" placeholder="Enter total Fees" value="<%= result[0].tfee %>">
+        <br><br>
+        <label for="dfee">Discounted Fees:</label>
+        <br>
+        <input type="number" name="dfee" id="dfee" placeholder="Enter discounted Fees" value="<%= result[0].dfee %>">
+        <br><br>
+        <div class="submit">
+           <input type="submit" name="submit" id="submit" >
+        </div>
+    </form>
+</section>
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity="0";
+            setTimeout(function(){
+                div.style.display="none"
+            },600);
+        }
+
+    }
+</script>
+</body>
+</html>
