@@ -1,0 +1,1 @@
+This is an institute managment web based service.This is one of my college projects and i'm constantly trying to develop and add new features/functionalities to improve it.  This project is currently not deployed.
